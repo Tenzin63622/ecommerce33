@@ -1,3 +1,4 @@
+
 {
   "name": "ecom-tut",
   "version": "0.1.0",
@@ -9,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.21.0",
     "@heroicons/react": "^2.2.0",
     "@radix-ui/react-slot": "^1.1.2",
     "@tailwindcss/postcss": "^4.0.13",
