@@ -40,6 +40,9 @@ export const Navbar = () => {
           <Link href="/checkout" className="hover:text-blue-600">
             Checkout
           </Link>
+          <Link href="/contact" className="hover:text-blue-600">
+            Contact
+          </Link>
         </div>
         <div className="flex items-center space-x-4">
           <Link href="/checkout" className="relative">

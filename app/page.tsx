@@ -3,6 +3,7 @@ import { stripe } from "@/lib/stripe";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Carousel } from "@/components/carousel";
+import { ProductList } from "@/components/product-list";
 
 export default async function Home() {
   const products = await stripe.products.list({
@@ -45,6 +46,83 @@ export default async function Home() {
       </section>
       <section className="py-8">
         <Carousel products={products.data} />
+      </section>
+      <section>
+        <div className="pb-8">
+          <h1 className="text-3xl font-bold leading-none tracking-tight text-foreground text-center mb-8">
+            All Products
+          </h1>
+          <ProductList products={products.data} />
+        </div>
+      </section>
+      <section>
+        <div className="bg-white rounded-xl shadow-md p-6 max-w-md mx-auto">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Contact Us</h2>
+          <p className="text-gray-600 text-sm mb-6">
+            Have questions? We&apos;re here to help.
+          </p>
+
+          <form className="space-y-4">
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-xs font-medium text-gray-700 mb-1"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Your name"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-xs font-medium text-gray-700 mb-1"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="your@email.com"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-xs font-medium text-gray-700 mb-1"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows={3}
+                className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="How can we help?"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-md transition"
+            >
+              Send Message
+            </button>
+          </form>
+
+          <div className="mt-6 pt-4 border-t border-gray-200">
+            <p className="text-xs text-gray-500">
+              Or reach us directly at{" "}
+              <span className="text-blue-600">support@example.com</span>
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   );

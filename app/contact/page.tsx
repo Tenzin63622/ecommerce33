@@ -22,7 +22,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
                 <p className="text-gray-700 mb-8">
-                  We'd love to hear from you. Reach out through any of these channels or fill out the form.
+                  We&apos;d love to hear from you. Reach out through any of these channels or fill out the form.
                 </p>
               </div>
 
@@ -49,7 +49,7 @@ export default function ContactPage() {
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-900">Email</h3>
                     <p className="text-gray-700 mt-1">support@myecommerce.com</p>
-                    <p className="text-gray-500 text-sm mt-1">We'll respond within 24 hours</p>
+                    <p className="text-gray-500 text-sm mt-1">We&apos;ll respond within 24 hours</p>
                   </div>
                 </div>
 
