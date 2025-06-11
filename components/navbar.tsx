@@ -9,6 +9,14 @@ import {
 import { useCartStore } from "@/store/cart-store";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
 export const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const { items } = useCartStore();
@@ -30,7 +38,7 @@ export const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-white shadow">
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <Link href="/" className="hover:text-blue-600">
-          My Ecommerce
+          ST THANKGA STORE
         </Link>
         <div className="hidden md:flex space-x-6">
           <Link href="/">Home</Link>
@@ -43,6 +51,20 @@ export const Navbar = () => {
           <Link href="/contact" className="hover:text-blue-600">
             Contact
           </Link>
+        
+             <SignedOut>
+              <SignInButton>
+                <Button className="bg-green-700 px-3 py-1 rounded-md">Sign In</Button>
+              </SignInButton >
+              <SignUpButton>
+                <Button className="bg-green-700 px-3 py-1 rounded-md">Log In</Button>
+              </SignUpButton >
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+            
+            
         </div>
         <div className="flex items-center space-x-4">
           <Link href="/checkout" className="relative">

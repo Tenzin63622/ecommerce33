@@ -10,6 +10,7 @@ export default async function Home() {
     expand: ["data.default_price"],
     limit: 5,
   });
+  
 
   return (
     <div>
@@ -55,75 +56,95 @@ export default async function Home() {
           <ProductList products={products.data} />
         </div>
       </section>
-      <section>
-        <div className="bg-white rounded-xl shadow-md p-6 max-w-md mx-auto">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Contact Us</h2>
-          <p className="text-gray-600 text-sm mb-6">
-            Have questions? We&apos;re here to help.
-          </p>
 
-          <form className="space-y-4">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-xs font-medium text-gray-700 mb-1"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Your name"
-              />
+      {/* Thangka Information Section */}
+      <section className="w-full py-12 bg-gray-50">
+        <div className="w-full bg-white py-8 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              The Art of Thangka
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">What is Thangka?</h3>
+                  <p className="text-gray-700">
+                    A thangka is a traditional Buddhist painting on cotton or silk appliqué, 
+                    originating from Nepal and Tibet. These sacred artworks typically depict 
+                    Buddhist deities, mandalas, or spiritual scenes, framed by brocade textiles.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">Sacred Symbolism</h3>
+                  <p className="text-gray-700">
+                    Every color, gesture, and element in a thangka carries deep spiritual meaning. 
+                    Artists follow strict iconographic rules to maintain religious accuracy, with 
+                    some paintings taking months to complete using mineral pigments and gold leaf.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">Spiritual Functions</h3>
+                  <ul className="list-disc pl-6 space-y-2 text-gray-700">
+                    <li>Meditation aids for visualizing deities</li>
+                    <li>Teaching tools for Buddhist philosophy</li>
+                    <li>Objects of devotion in rituals</li>
+                    <li>Historical records of Buddhist lineages</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-3">Historical Journey</h3>
+                  <p className="text-gray-700">
+                    Introduced to Tibet by Nepalese Princess Bhrikuti in the 7th century, 
+                    thangkas evolved through cultural exchanges while maintaining their 
+                    spiritual essence. Their scroll format made them ideal for nomadic monks 
+                    spreading Dharma across the Himalayas.
+                  </p>
+                </div>
+              </div>
             </div>
-
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-xs font-medium text-gray-700 mb-1"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="your@email.com"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-xs font-medium text-gray-700 mb-1"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={3}
-                className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="How can we help?"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2 px-4 rounded-md transition"
-            >
-              Send Message
-            </button>
-          </form>
-
-          <div className="mt-6 pt-4 border-t border-gray-200">
-            <p className="text-xs text-gray-500">
-              Or reach us directly at{" "}
-              <span className="text-blue-600">support@example.com</span>
-            </p>
           </div>
         </div>
       </section>
+
+              
+      {/* Footer */}
+      <footer className="bg-black text-white py-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="mb-4 md:mb-0">
+              <h3 className="text-xl font-bold">ST Store</h3>
+              <p className="text-gray-400 text-sm mt-2">
+                Preserving traditional spiritual thangka
+              </p>
+            </div>
+            <div className="flex space-x-6">
+              <Link href="/">Home</Link>
+              <Link href="/products" className="text-gray-400 hover:text-white transition">
+                Products
+              </Link>
+              <Link href="/checkout" className="text-gray-400 hover:text-white transition">
+                Checkout
+              </Link>
+              <Link href="/contact" className="text-gray-400 hover:text-white transition">
+                Contact
+              </Link>
+              <div className="hidden md:flex space-x-6">
+          
+          
+        </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400 text-sm">
+            <p>© {new Date().getFullYear()} ST Store. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
