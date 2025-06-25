@@ -35,7 +35,7 @@ export default function ContactPage() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-900">Phone</h3>
-                    <p className="text-gray-700 mt-1">+1 (555) 123-4567</p>
+                    <p className="text-gray-700 mt-1">6163255917</p>
                     <p className="text-gray-500 text-sm mt-1">Mon-Fri, 9am-5pm PST</p>
                   </div>
                 </div>
@@ -48,7 +48,7 @@ export default function ContactPage() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-900">Email</h3>
-                    <p className="text-gray-700 mt-1">support@myecommerce.com</p>
+                    <p className="text-gray-700 mt-1">Lamasaphal@gmail.com</p>
                     <p className="text-gray-500 text-sm mt-1">We&apos;ll respond within 24 hours</p>
                   </div>
                 </div>
